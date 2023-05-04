@@ -1,0 +1,19 @@
+﻿Challenge: Write a Python function that calls the OpenWeatherMap API to get the current temperature for a given city. The function should return a list of cities sorted by temperature in descending order.
+
+API documentation: The OpenWeatherMap API can be accessed at https://openweathermap.org/api. You will need to sign up for an API key to use the service.
+
+Requirements:
+
+Install Python3 > https://realpython.com/installing-python/
+1. Install Python3 and make sure you can run PIP from the command line.
+2. Create a requirement file (think of composer.json) > https://realpython.com/lessons/using-requirement-files/
+3. Install the requests library if you haven't already. Add it to requirements.txt > https://pypi.org/project/requests/
+4. Install required packages from the requirements.txt
+
+Functions > https://www.w3schools.com/python/python_functions.asp
+5. The function should take a list of city names as input.
+6. The function should call the OpenWeatherMap API for each city to get the current temperature.
+7. The function should sort the cities by temperature in descending order.
+8. The function should return a list of tuples, where each tuple contains the city name and temperature.
+
+DON’T LOOK AT THE ANSWERS UNTIL YOU’VE COMPLETED THE STEPS ABOVE OR GET COMPLETELY STUMPED.

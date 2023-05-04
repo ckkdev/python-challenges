@@ -1,0 +1,12 @@
+﻿import requests
+import json
+
+def get_user_repos(username):
+    url = f"https://api.github.com/users/{username}/repos"
+    response = requests.get(url)
+    repos = json.loads(response.content)
+    repo_data = [{repo["name"]: repo["stargazers_count"]} for repo in repos]
+    return json.dumps(repo_data)
+
+Call as;
+print(get_user_repos("torvalds"))

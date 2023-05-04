@@ -1,0 +1,18 @@
+﻿Challenge: Write a Python function that takes a string parameter representing a GitHub username and returns a JSON object containing the user's repositories and the number of stars each repository has.
+
+You will need to use the GitHub REST API to retrieve the user's repositories and their associated star counts, modify the data to only include the repository name and star count, and return the modified data in JSON format.
+
+Steps:
+1. Install the requests library if you haven't already. You can do this by running pip install requests in your terminal.
+2. Write a function that takes a GitHub username as a parameter and uses the requests library to call the GitHub REST API to retrieve the user's repositories. You can use the following URL to retrieve the repositories: https://api.github.com/users/{username}/repos
+3. Parse the JSON response from the API call to extract the repository names and star counts. You can use a for loop to iterate through the response and append the repository names and star counts to a list.
+4. Create a new JSON object that only includes the repository names and star counts. You can use a dictionary comprehension to create this object.
+5. Use the json.dumps() function to convert the JSON object to a JSON string.
+6. Return the JSON string from the function.
+
+
+DON’T LOOK AT THE ANSWERS UNTIL YOU’VE COMPLETED THE STEPS ABOVE OR GET COMPLETELY STUMPED. 
+
+
+EXTRA CREDIT - LEARN HOW TO PASS ARGUMENTS VIA COMMAND LINE TO PASS THE USERNAME TO THE PYTHON SCRIPT
+https://realpython.com/python-command-line-arguments/

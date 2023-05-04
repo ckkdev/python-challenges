@@ -1,0 +1,19 @@
+﻿import requests
+
+def get_current_temperature(cities):
+    api_key = 'YOUR_API_KEY_HERE'
+    temperatures = []
+    for city in cities:
+        url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            temperature = data['main']['temp']
+            temperatures.append((city, temperature))
+    temperatures.sort(key=lambda x: x[1], reverse=True)
+    return temperatures
+
+USE AS;
+cities = ['New York', 'Los Angeles', 'Chicago', 'Houston']
+temperatures = get_current_temperature(cities)
+print(temperatures)
